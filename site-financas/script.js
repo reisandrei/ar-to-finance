@@ -16,8 +16,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Função de login
-window.login = function () {
+// Evento do botão de login
+document.getElementById("btn-login").addEventListener("click", () => {
   const email = document.getElementById("email").value;
   const senha = document.getElementById("password").value;
 
@@ -26,15 +26,15 @@ window.login = function () {
       document.getElementById("msg").innerText = "Login bem-sucedido!";
       setTimeout(() => {
         window.location.href = "dashboard.html";
-      }, 1000);
+      }, 1500);
     })
     .catch((error) => {
-      document.getElementById("msg").innerText = "Erro: " + error.message;
+      document.getElementById("msg").innerText = "Erro ao fazer login: " + error.message;
     });
-};
+});
 
-// Função de cadastro
-window.signup = function () {
+// Evento do botão de cadastro
+document.getElementById("btn-signup").addEventListener("click", () => {
   const email = document.getElementById("email").value;
   const senha = document.getElementById("password").value;
 
@@ -43,6 +43,6 @@ window.signup = function () {
       document.getElementById("msg").innerText = "Conta criada com sucesso!";
     })
     .catch((error) => {
-      document.getElementById("msg").innerText = "Erro: " + error.message;
+      document.getElementById("msg").innerText = "Erro ao criar conta: " + error.message;
     });
-};
+});
