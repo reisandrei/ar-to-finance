@@ -22,7 +22,7 @@ window.login = function () {
     .then(() => {
       document.getElementById("msg").innerText = "Login bem-sucedido!";
       setTimeout(() => {
-        window.location.href = "home.html";
+        window.location.href = "dashboard.html";
       }, 1000);
     })
     .catch((error) => {
