@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AR To Finance - Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    label, select, button {
+      font-size: 1rem;
+      margin: 10px 0;
+      display: block;
+      width: 100%;
+      max-width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #saldos {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    #saldos.hidden {
+      filter: blur(8px);
+      user-select: none;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Dashboard AR To Finance</h1>
+
+  <label for="mesFiltro">Filtrar mês:</label>
+  <select id="mesFiltro">
+    <option value="2025-06">Junho 2025</option>
+    <option value="2025-07">Julho 2025</option>
+    <option value="2025-08">Agosto 2025</option>
+  </select>
+
+  <button id="btnToggleSaldos">Ocultar saldos</button>
+
+  <div id="saldos">
+    <p><strong>Conta Corrente:</strong> R$ 2.500,00</p>
+    <p><strong>Cartão de Crédito:</strong> R$ -780,00</p>
+  </div>
+
+  <button id="btnAddMovimentacao">+ Adicionar movimentação</button>
+
+  <script>
+    const btnToggleSaldos = document.getElementById('btnToggleSaldos');
+    const saldosDiv = document.getElementById('saldos');
+
+    btnToggleSaldos.addEventListener('click', () => {
+      const ocultar = saldosDiv.classList.toggle('hidden');
+      btnToggleSaldos.textContent = ocultar ? 'Mostrar saldos' : 'Ocultar saldos';
+    });
+
+    // Futuro: clique no botão "Adicionar movimentação" vai abrir a tela de transações
+    document.getElementById('btnAddMovimentacao').addEventListener('click', () => {
+      alert('Aqui vamos abrir o formulário para nova movimentação!');
+    });
+  </script>
+
+</body>
+</html>
