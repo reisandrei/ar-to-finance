@@ -4,9 +4,12 @@ import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } f
 
 // Configuração do Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyC9agZqz5UPkzYyUmH0cBpv2mMLjYFPkPs",
-  authDomain: "ar-to-finance.firebaseapp.com",
-  projectId: "ar-to-finance"
+  apiKey: "AIzaSyBjJa8HkPREBxMgvheSQpzyhBY1RiY45w4",
+  authDomain: "ar-2-finance-7adc8.firebaseapp.com",
+  projectId: "ar-2-finance-7adc8",
+  storageBucket: "ar-2-finance-7adc8.appspot.com",
+  messagingSenderId: "859218907573",
+  appId: "1:859218907573:web:a778994c283ceab90e49fc"
 };
 
 // Inicializa o Firebase
