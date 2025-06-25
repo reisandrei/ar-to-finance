@@ -25,7 +25,7 @@ document.getElementById("btn-login").addEventListener("click", () => {
     .then(() => {
       document.getElementById("msg").innerText = "Login bem-sucedido!";
       setTimeout(() => {
-        window.location.href = "dashboard.html";
+        window.location.href = "dashboard.html"; // Redireciona para o dashboard
       }, 1500);
     })
     .catch((error) => {
